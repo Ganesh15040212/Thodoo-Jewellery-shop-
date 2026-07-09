@@ -109,7 +109,7 @@ export default function HeroSlider() {
         <p className="hero-subtitle">{slide.subtitle}</p>
         <div className="hero-ctas">
           <Link to={slide.cta1.href} className="btn btn-gold btn-lg hero-cta">{slide.cta1.label}</Link>
-          <Link to={slide.cta2.href} className="btn btn-gold btn-lg hero-cta">{slide.cta2.label}</Link>
+          <Link to={slide.cta2.href} className="btn btn-outline btn-lg hero-cta">{slide.cta2.label}</Link>
         </div>
 
         {/* Quick Category Pills */}

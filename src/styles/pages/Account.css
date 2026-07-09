@@ -1,4 +1,4 @@
-.account-page { min-height: 80vh; padding: var(--space-3xl) 0; background: var(--cream); }
+.account-page { min-height: 80vh; padding: 48px 0; background: var(--cream); }
 .account-layout { display: grid; grid-template-columns: 280px 1fr; gap: var(--space-2xl); align-items: start; }
 
 .account-sidebar { background: white; border-radius: var(--radius-lg); padding: var(--space-lg); box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.05); }
@@ -19,7 +19,7 @@
 
 .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: var(--charcoal); }
 
-.empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-3xl) 0; text-align: center; }
+.empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 0; text-align: center; }
 .empty-state h3 { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 8px; }
 .empty-state p { color: var(--charcoal-ghost); font-size: 0.9rem; }
 

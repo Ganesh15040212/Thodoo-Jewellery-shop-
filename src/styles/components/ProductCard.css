@@ -5,7 +5,7 @@
   text-decoration: none;
   color: inherit;
   background: var(--white);
-  border-radius: 16px;
+  border-radius: 0px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
   border: 1px solid rgba(139, 90, 43, 0.08);
@@ -58,7 +58,7 @@
 
 .product-badge {
   padding: 4px 10px;
-  border-radius: 20px;
+  border-radius: 0px;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -133,7 +133,7 @@
   background: var(--charcoal);
   color: var(--white);
   border: none;
-  border-radius: 8px;
+  border-radius: 0px;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.05em;

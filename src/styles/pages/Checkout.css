@@ -1,8 +1,8 @@
-.checkout-page { min-height: 100vh; background: var(--cream); padding-bottom: var(--space-3xl); }
+.checkout-page { min-height: 100vh; background: var(--cream); padding-bottom: 48px; }
 .checkout-header { display: flex; justify-content: space-between; align-items: center; padding: var(--space-xl) 0; border-bottom: 1px solid rgba(0,0,0,0.1); margin-bottom: var(--space-2xl); }
 .secure-badge { display: flex; align-items: center; gap: 6px; color: var(--success); font-weight: 500; font-size: 0.9rem; }
 
-.checkout-layout { display: grid; grid-template-columns: 1fr 400px; gap: var(--space-3xl); align-items: start; }
+.checkout-layout { display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: start; }
 
 .checkout-steps { display: flex; align-items: center; justify-content: center; gap: var(--space-md); margin-bottom: var(--space-2xl); }
 .step-indicator { font-size: 0.9rem; color: var(--charcoal-ghost); font-weight: 500; }

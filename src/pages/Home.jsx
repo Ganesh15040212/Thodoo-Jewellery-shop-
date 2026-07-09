@@ -50,13 +50,13 @@ export default function Home() {
         <div className="container">
           <div className="about-grid">
             <div className="about-content">
-              <span className="eyebrow">Our Heritage</span>
-              <h2 className="section-title">Crafting Elegance Since 1975</h2>
+              <span className="eyebrow">Our Story</span>
+              <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '20px' }}>At Thodoo, we’re not just a brand; we’re a lifestyle.</h2>
               <p className="about-desc">
-                Welcome to Thodoo Collections, a specialized boutique dedicated exclusively to the design and craft of premium earrings. For decades, we have been crafting stories in gold and diamonds for life's most precious moments.
+                Founded with a passion for celebrating cultural diversity and individual expression, Thodoo has become a haven for those seeking a harmonious blend of modern trends and ethnic charm.
               </p>
               <p className="about-desc">
-                Every pair of earrings is a masterpiece of precision and heritage. We work exclusively with certified 18K and 9K gold, GIA/IGI certified diamonds, and handpicked natural gemstones, combining traditional Indian jewelry art with modern silhouettes.
+                Our journey began with the aspiration to provide a unique space where customers can explore, appreciate, and embrace the beauty of both contemporary and traditional earrings.
               </p>
               <div className="about-features">
                 <div className="about-feature">

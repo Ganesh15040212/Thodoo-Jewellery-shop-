@@ -193,12 +193,12 @@
 /* Try-On Banner */
 .tryon-banner-section {
   background: linear-gradient(135deg, #0F0F0F 0%, #2D1B15 50%, #0A0A0A 100%);
-  padding: var(--space-3xl) 0;
+  padding: var(--space-xl) 0;
 }
 .tryon-banner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-3xl);
+  gap: var(--space-xl);
   align-items: center;
 }
 .tryon-banner-title {
@@ -334,7 +334,7 @@
 .about-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: var(--space-3xl);
+  gap: var(--space-xl);
   align-items: center;
 }
 .about-desc {
@@ -359,7 +359,7 @@
   height: 44px;
   background: var(--gold-muted);
   color: var(--gold);
-  border-radius: 8px;
+  border-radius: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,12 +426,13 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: var(--space-2xl);
-  align-items: flex-start;
+  align-items: stretch;
 }
 .offers-promo-cards {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
+  height: 100%;
 }
 .promo-card {
   background: var(--cream-dark);
@@ -441,6 +442,10 @@
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .promo-card:hover {
   border-color: var(--gold);
@@ -455,7 +460,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 0px;
   margin-bottom: 12px;
 }
 .promo-card h3 {

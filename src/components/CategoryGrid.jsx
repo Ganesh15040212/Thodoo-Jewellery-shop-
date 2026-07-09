@@ -3,25 +3,33 @@ import { CATEGORIES } from '../data/categories';
 import '../styles/components/CategoryGrid.css';
 
 export default function CategoryGrid() {
+  // Duplicate categories multiple times to create a seamless, infinite loop marquee
+  const marqueeItems = [...CATEGORIES, ...CATEGORIES, ...CATEGORIES];
+
   return (
-    <section className="section category-section">
+    <section className="section category-section" style={{ overflow: 'hidden' }}>
       <div className="container">
         <div className="section-header">
           <span className="eyebrow">Shop by Category</span>
           <h2 className="section-title">Explore Earring Types</h2>
-          <div className="gold-line gold-line-center" style={{marginTop: '12px'}} />
+          <div className="gold-line gold-line-center" style={{ marginTop: '12px' }} />
         </div>
-        <div className="category-grid">
-          {CATEGORIES.map((cat, i) => (
+      </div>
+      
+      {/* Full-width Marquee Section */}
+      <div className="category-marquee-container">
+        <div className="category-marquee-track">
+          {marqueeItems.map((cat, idx) => (
             <Link
-              key={cat.id}
+              key={`${cat.id}-${idx}`}
               to={`/catalog/${cat.id}`}
-              className="category-card"
-              style={{ animationDelay: `${i * 0.05}s` }}
+              className="category-marquee-card"
             >
               <div className="category-card-img-wrap">
                 <img src={cat.image} alt={cat.label} className="category-card-img" loading="lazy" />
                 <div className="category-card-overlay"></div>
+                <div className="category-card-glow" />
+                
                 {/* Floating bubble elements */}
                 <div className="category-bubbles">
                   <span className="bubble b1"></span>
@@ -33,7 +41,9 @@ export default function CategoryGrid() {
               </div>
               <div className="category-card-content">
                 <h3 className="category-card-title">{cat.label}</h3>
-                <span className="category-card-link">Explore <span style={{marginLeft:'4px'}}>→</span></span>
+                <span className="category-card-link">
+                  Explore <span className="arrow-move">→</span>
+                </span>
               </div>
             </Link>
           ))}
