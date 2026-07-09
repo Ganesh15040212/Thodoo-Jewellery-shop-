@@ -189,7 +189,7 @@ export default function Home() {
 
             <div className="offers-featured-products">
               <h3 className="offers-products-title">Featured Limited Editions</h3>
-              <div className="products-grid" style={{ gridTemplateColumns: '1fr 1fr', gap: 'var(--space-md)' }}>
+              <div className="offers-featured-grid">
                 {offersList.slice(0, 2).map(p => (
                   <ProductCard key={p.id} product={p} onQuickView={setQuickView} />
                 ))}

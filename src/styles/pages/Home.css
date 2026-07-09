@@ -631,3 +631,17 @@
   gap: 6px;
 }
 
+/* Offers Featured Grid Layout */
+.offers-featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+@media (max-width: 576px) {
+  .offers-featured-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
