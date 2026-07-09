@@ -11,7 +11,7 @@ const SLIDES = [
     subtitle: 'Exquisite gold, diamond & bridal earrings crafted for India\'s most precious moments.',
     cta1: { label: 'Shop Bridal', href: '/catalog/bridal' },
     cta2: { label: 'Explore Diamonds', href: '/catalog/diamond' },
-    video: '/Create_a_luxurious_cinematic_j.mp4',
+    image: '/hero_bridal_earrings.png',
     accent: '#8B5A2B',
     align: 'left',
   },
@@ -22,7 +22,7 @@ const SLIDES = [
     subtitle: 'Certified solitaires, cluster dangles & statement studs that define luxury.',
     cta1: { label: 'Shop Diamonds', href: '/catalog/diamond' },
     cta2: { label: 'View All', href: '/catalog' },
-    video: '/Create_a_luxurious_jewelry_pro.mp4',
+    image: '/hero_diamond_earrings.png',
     accent: '#7BA3C8',
     align: 'center',
   },
@@ -33,7 +33,7 @@ const SLIDES = [
     subtitle: 'Ancient temple art traditions woven into breathtaking gold earrings.',
     cta1: { label: 'Shop Temple', href: '/catalog/temple' },
     cta2: { label: 'Antique Earrings', href: '/catalog/antique' },
-    video: '/Create_a_premium_luxury_jewell.mp4',
+    image: '/hero_temple_earrings.png',
     accent: '#8B5A2B',
     align: 'left',
   },
@@ -44,7 +44,7 @@ const SLIDES = [
     subtitle: 'Beautiful gold earrings crafted in premium 18K and 9K gold.',
     cta1: { label: 'Shop Gold Earrings', href: '/catalog?metal=gold' },
     cta2: { label: 'All Earrings', href: '/catalog' },
-    video: '/Create_an_ultra_realistic_luxu.mp4',
+    image: '/hero_gold_hoops.png',
     accent: '#8B5A2B',
     align: 'center',
   },
@@ -78,7 +78,11 @@ export default function HeroSlider() {
     <section className="hero">
       {/* Background */}
       <div className={`hero-bg ${animating ? 'fading' : ''}`}>
-        <video src={slide.video || ""} autoPlay loop muted playsInline />
+        {slide.video ? (
+          <video src={slide.video} autoPlay loop muted playsInline />
+        ) : (
+          <img src={slide.image} alt={slide.badge} className="hero-bg-image" />
+        )}
         <div className="hero-overlay" />
         <div className="hero-grain" />
       </div>

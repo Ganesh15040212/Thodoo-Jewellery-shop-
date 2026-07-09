@@ -192,7 +192,8 @@ h1, h2, h3, h4, h5 {
   overflow: hidden;
   white-space: nowrap;
   background-size: 200% 100%;
-  background-position: right bottom;
+  background-position: 101% 0;
+  background-repeat: no-repeat;
   transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-position 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -208,35 +209,39 @@ h1, h2, h3, h4, h5 {
 .btn:hover::before { opacity: 1; }
 
 .btn-gold {
-  background-image: linear-gradient(to right, var(--gold-dark) 50%, var(--gold) 50%);
-  color: var(--white);
-  box-shadow: var(--shadow-gold);
+  background-image: linear-gradient(to right, #34180a 50%, #ffffff 50%);
+  color: #34180a;
+  border: 1px solid rgba(52, 24, 10, 0.12);
+  box-shadow: 0 4px 12px rgba(52, 24, 10, 0.06);
 }
 .btn-gold:hover {
-  background-position: left bottom;
-  box-shadow: 0 8px 32px rgba(139, 90, 43, 0.45);
+  background-position: 0 0;
+  color: var(--white);
+  box-shadow: 0 8px 32px rgba(52, 24, 10, 0.35);
   transform: translateY(-2px);
 }
 
 .btn-outline {
-  background-image: linear-gradient(to right, var(--gold) 50%, transparent 50%);
-  color: var(--gold);
-  border: 1.5px solid var(--gold);
+  background-image: linear-gradient(to right, #34180a 50%, #ffffff 50%);
+  color: #34180a;
+  border: 1.5px solid #34180a;
 }
 .btn-outline:hover {
-  background-position: left bottom;
+  background-position: 0 0;
   color: var(--white);
-  border-color: var(--gold);
+  border-color: #34180a;
   transform: translateY(-2px);
 }
 
 .btn-dark {
-  background-image: linear-gradient(to right, var(--gold-dark) 50%, var(--charcoal) 50%);
-  color: var(--white);
-  box-shadow: var(--shadow-card);
+  background-image: linear-gradient(to right, #34180a 50%, #ffffff 50%);
+  color: #34180a;
+  border: 1px solid rgba(52, 24, 10, 0.12);
+  box-shadow: 0 4px 12px rgba(52, 24, 10, 0.06);
 }
 .btn-dark:hover {
-  background-position: left bottom;
+  background-position: 0 0;
+  color: var(--white);
   transform: translateY(-2px);
 }
 
@@ -332,7 +337,7 @@ h1, h2, h3, h4, h5 {
   .section-sm { padding: 16px 0; }
   .btn { padding: 12px 24px; font-size: 0.82rem; }
   .btn-lg { padding: 14px 28px; font-size: 0.875rem; }
-  .section-header { margin-bottom: var(--space-xl); }
+  .section-header { margin-bottom: var(--space-md); }
   .display-title { font-size: clamp(1.8rem, 7vw, 2.8rem); }
   .section-title { font-size: clamp(1.4rem, 5vw, 2rem); }
 }
@@ -340,7 +345,7 @@ h1, h2, h3, h4, h5 {
 /* ---- Section Header ---- */
 .section-header {
   text-align: center;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
 }
 .section-header .eyebrow {
   display: inline-block;

@@ -7,7 +7,7 @@ export default function CategoryGrid() {
   const marqueeItems = [...CATEGORIES, ...CATEGORIES, ...CATEGORIES];
 
   return (
-    <section className="section category-section" style={{ overflow: 'hidden' }}>
+    <section id="earring-types" className="section category-section" style={{ overflow: 'hidden' }}>
       <div className="container">
         <div className="section-header">
           <span className="eyebrow">Shop by Category</span>

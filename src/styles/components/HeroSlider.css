@@ -217,16 +217,16 @@
 }
 
 .hero-ctas .btn-outline {
-  background-image: linear-gradient(to right, var(--gold) 50%, rgba(255, 255, 255, 0.95) 50%);
+  background-image: linear-gradient(to right, #34180a 50%, rgba(255, 255, 255, 0.95) 50%);
   background-size: 200% 100%;
   background-position: right bottom;
-  color: var(--gold);
-  border: 1.5px solid var(--gold);
+  color: #34180a;
+  border: 1.5px solid #34180a;
 }
 .hero-ctas .btn-outline:hover {
   background-position: left bottom;
   color: var(--white);
-  border-color: var(--gold);
+  border-color: #34180a;
 }
 
 /* Quick Links */

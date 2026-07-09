@@ -55,7 +55,8 @@
   gap: 24px;
   animation: navbar-marquee 22s linear infinite;
   white-space: nowrap;
-  padding-right: 48px; /* space between loops */
+  padding-right: 48px;
+  /* space between loops */
 }
 
 /* Pause marquee on hover */
@@ -109,6 +110,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -120,17 +122,17 @@
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
-  background: #ffffff;
+  background: #34180a;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(139, 90, 43, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: var(--transition-base);
 }
 
 .navbar-scrolled {
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(52, 24, 10, 0.98);
   box-shadow: var(--shadow-nav);
-  border-bottom-color: rgba(139, 90, 43, 0.25);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
 }
 
 .navbar-inner {
@@ -170,6 +172,7 @@
 }
 
 @media (max-width: 1024px) {
+
   .navbar-logo-img,
   .navbar-logo img {
     height: 44px;
@@ -221,15 +224,15 @@
   font-size: 1.05rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: #2D1B15;
+  color: rgba(255, 255, 255, 0.9);
   border-radius: var(--radius-sm);
   transition: var(--transition-fast);
   white-space: nowrap;
 }
 
 .nav-link:hover {
-  color: #8B5A2B;
-  background: rgba(139, 90, 43, 0.08);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* Mega Menu */
@@ -294,7 +297,7 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-full);
-  color: #2D1B15;
+  color: rgba(255, 255, 255, 0.9);
   transition: var(--transition-fast);
   background: transparent;
   border: none;
@@ -302,8 +305,8 @@
 }
 
 .nav-action-btn:hover {
-  background: rgba(139, 90, 43, 0.08);
-  color: #8B5A2B;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--gold);
 }
 
 .nav-badge {
@@ -324,7 +327,7 @@
 }
 
 .cart-btn {
-  color: #2D1B15;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Mobile Toggle */
@@ -335,7 +338,7 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  color: #2D1B15;
+  color: rgba(255, 255, 255, 0.9);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -343,8 +346,8 @@
 }
 
 .nav-mobile-toggle:hover {
-  background: rgba(139, 90, 43, 0.08);
-  color: #8B5A2B;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--gold);
 }
 
 /* Search Overlay */

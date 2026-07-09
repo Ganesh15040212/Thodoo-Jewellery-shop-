@@ -39,13 +39,33 @@ export default function Navbar() {
     }
   };
 
+  const handleNavClick = (href, e) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      setMobileOpen(false);
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        const offset = 76;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetElement.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   const navLinks = [
-    { label: 'Home', href: '/', dropdown: null, icon: <Home size={18} /> },
-    { label: 'About', href: '/about', dropdown: null, icon: <Info size={18} /> },
-    { label: 'Shop By Type', href: '/catalog', hasDropdown: true, icon: <LayoutGrid size={18} /> },
-    { label: 'New Arrivals', href: '/catalog', dropdown: null, icon: <Sparkles size={18} /> },
-    { label: 'Best Sellers', href: '/catalog', dropdown: null, icon: <Crown size={18} /> },
-    { label: 'Offers', href: '/catalog', dropdown: null, icon: <Tag size={18} /> },
+    { label: 'Home', href: '#hero', dropdown: null, icon: <Home size={18} /> },
+    { label: 'About', href: '#about', dropdown: null, icon: <Info size={18} /> },
+    { label: 'Shop By Type', href: '#earring-types', dropdown: null, icon: <LayoutGrid size={18} /> },
+    { label: 'New Arrivals', href: '#new-arrivals', dropdown: null, icon: <Sparkles size={18} /> },
+    { label: 'Best Sellers', href: '#best-sellers', dropdown: null, icon: <Crown size={18} /> },
+    { label: 'Offers', href: '#offers', dropdown: null, icon: <Tag size={18} /> },
   ];
 
   return (
@@ -103,9 +123,9 @@ export default function Navbar() {
               <div key={link.label} className="nav-item"
                 onMouseEnter={() => link.hasDropdown && setActiveDropdown(link.label)}
                 onMouseLeave={() => setActiveDropdown(null)}>
-                <Link to={link.href} className="nav-link">
+                <a href={link.href} className="nav-link" onClick={(e) => handleNavClick(link.href, e)}>
                   {link.label}
-                </Link>
+                </a>
                 {link.hasDropdown && activeDropdown === link.label && (
                   <div className="nav-megamenu" style={{ width: '560px', left: '50%', transform: 'translateX(-50%)' }}>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
@@ -205,10 +225,10 @@ export default function Navbar() {
         </div>
         <div className="mobile-menu-inner">
           {navLinks.map(link => (
-            <Link key={link.label} to={link.href} className="mobile-nav-link" onClick={() => setMobileOpen(false)}>
+            <a key={link.label} href={link.href} className="mobile-nav-link" onClick={(e) => handleNavClick(link.href, e)}>
               <span className="mobile-nav-icon">{link.icon}</span>
               {link.label}
-            </Link>
+            </a>
           ))}
           <div className="mobile-divider" />
           <div className="mobile-categories" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

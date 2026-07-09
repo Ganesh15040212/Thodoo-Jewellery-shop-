@@ -42,8 +42,8 @@
 /* Main Footer */
 .footer-main {
   padding: 32px 0 var(--space-2xl);
-  background: var(--white);
-  color: var(--charcoal);
+  background: #34180a;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-grid {
@@ -68,7 +68,7 @@
   object-fit: contain;
   display: block;
   transition: height var(--transition-base);
-  filter: none !important;
+  filter: brightness(0) invert(1) !important;
 }
 
 @media (max-width: 768px) {
@@ -91,7 +91,7 @@
   font-family: var(--font-serif);
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--charcoal);
+  color: var(--white);
 }
 
 .footer-tagline {
@@ -106,7 +106,7 @@
 .footer-about {
   font-size: 0.82rem;
   line-height: 1.7;
-  color: var(--charcoal-light);
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: var(--space-md);
 }
 
@@ -122,7 +122,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.8rem;
-  color: var(--charcoal-mid);
+  color: rgba(255, 255, 255, 0.65);
   transition: color var(--transition-fast);
 }
 
@@ -142,9 +142,9 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: var(--cream-dark);
-  border: 1px solid rgba(139, 90, 43, 0.15);
-  color: var(--charcoal-mid);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.85);
   transition: var(--transition-fast);
 }
 
@@ -160,7 +160,7 @@
   font-family: var(--font-serif);
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--charcoal);
+  color: var(--white);
   margin-bottom: var(--space-md);
   position: relative;
   padding-bottom: 10px;
@@ -188,7 +188,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.82rem;
-  color: var(--charcoal-light);
+  color: rgba(255, 255, 255, 0.65);
   transition: var(--transition-fast);
 }
 
@@ -200,7 +200,7 @@
 /* Newsletter */
 .footer-newsletter-desc {
   font-size: 0.8rem;
-  color: var(--charcoal-light);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.6;
   margin-bottom: var(--space-md);
 }
@@ -216,15 +216,15 @@
 .footer-email-input {
   flex: 1;
   padding: 11px 14px;
-  background: var(--cream-dark);
+  background: rgba(255, 255, 255, 0.08);
   border: none;
-  color: var(--charcoal);
+  color: var(--white);
   font-size: 0.82rem;
   outline: none;
 }
 
 .footer-email-input::placeholder {
-  color: var(--charcoal-ghost);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .footer-email-btn {
@@ -245,7 +245,7 @@
 .footer-apps-title {
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--charcoal-light);
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -262,11 +262,11 @@
   align-items: center;
   gap: 6px;
   padding: 7px 12px;
-  background: var(--cream-dark);
-  border: 1px solid rgba(139, 90, 43, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
-  color: var(--charcoal-mid);
+  color: rgba(255, 255, 255, 0.85);
   transition: var(--transition-fast);
 }
 
