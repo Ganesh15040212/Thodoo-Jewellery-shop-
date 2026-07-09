@@ -79,10 +79,10 @@ export default function CartDrawer() {
                 <span>₹{total.toLocaleString('en-IN')}+</span>
               </div>
             </div>
-            <Link to="/checkout" className="btn btn-gold w-full" onClick={() => setCartOpen(false)}>
+            <Link to="/checkout" className="btn btn-gold btn-lg w-full" onClick={() => setCartOpen(false)}>
               Proceed to Checkout
             </Link>
-            <Link to="/cart" className="btn btn-outline w-full" style={{ marginTop: '8px' }} onClick={() => setCartOpen(false)}>
+            <Link to="/cart" className="btn btn-gold btn-lg w-full" style={{ marginTop: '8px' }} onClick={() => setCartOpen(false)}>
               View Full Cart
             </Link>
           </div>

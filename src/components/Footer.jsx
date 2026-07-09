@@ -63,7 +63,7 @@ export default function Footer() {
                 <img src={logoImg} alt="Thodoo" className="footer-logo-img" />
               </Link>
               <p className="footer-about">
-                India\'s most trusted premium earring brand, crafting exquisite gold, diamond,
+                India's most trusted premium earring brand, crafting exquisite gold, diamond,
                 and bridal earrings since 1975. Over 5 lakh happy customers across India.
               </p>
               <div className="footer-contact-items">

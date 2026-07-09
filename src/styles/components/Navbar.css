@@ -150,33 +150,27 @@
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
+  position: relative;
+  z-index: 9999;
 }
 
-.navbar-logo-img {
+.navbar-logo-img,
+.navbar-logo img {
   height: 48px;
   width: auto;
   max-width: 240px;
   object-fit: contain;
   display: block;
   transition: height var(--transition-base);
+  /* GPU acceleration to prevent jagged scaling/pixelation during/after transitions */
+  transform: translate3d(0, 0, 0);
+  will-change: transform, height;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 @media (max-width: 1024px) {
-  .navbar-logo-img {
-    height: 44px;
-  }
-}
-
-.navbar-logo img {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  transition: height 0.3s ease;
-}
-
-@media (max-width: 1024px) {
+  .navbar-logo-img,
   .navbar-logo img {
     height: 44px;
   }

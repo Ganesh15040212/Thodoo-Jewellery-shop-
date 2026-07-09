@@ -74,7 +74,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Link to="/about" className="btn btn-gold" style={{ marginTop: 'var(--space-md)' }}>
+              <Link to="/about" className="btn btn-gold btn-lg" style={{ marginTop: 'var(--space-md)' }}>
                 Learn More About Us <ArrowRight size={14} />
               </Link>
             </div>

@@ -23,8 +23,8 @@
   --error: #E57373;
 
   /* Typography */
-  --font-serif: 'Poppins', sans-serif;
-  --font-serif-alt: 'Poppins', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-serif-alt: 'Playfair Display', serif;
   --font-body: 'Poppins', sans-serif;
 
   /* Spacing */

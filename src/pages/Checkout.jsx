@@ -57,7 +57,7 @@ export default function Checkout() {
                     <input type="text" placeholder="PIN Code" required className="input" />
                     <input type="tel" placeholder="Phone Number" required className="input" />
                   </div>
-                  <button type="submit" className="btn btn-dark mt-lg">Continue to Payment</button>
+                  <button type="submit" className="btn btn-gold btn-lg mt-lg w-full">Continue to Payment</button>
                 </div>
               )}
 
@@ -78,8 +78,8 @@ export default function Checkout() {
                     <input type="text" placeholder="CVV" className="input" />
                   </div>
                   <div className="form-actions mt-lg">
-                    <button type="button" className="btn btn-outline" onClick={() => setStep(1)}>Back</button>
-                    <button type="submit" className="btn btn-dark">Review Order</button>
+                    <button type="button" className="btn btn-outline btn-lg" onClick={() => setStep(1)}>Back</button>
+                    <button type="submit" className="btn btn-gold btn-lg">Review Order</button>
                   </div>
                 </div>
               )}
@@ -96,8 +96,8 @@ export default function Checkout() {
                     <p>Credit Card ending in 4242</p>
                   </div>
                   <div className="form-actions mt-lg">
-                    <button type="button" className="btn btn-outline" onClick={() => setStep(2)}>Back</button>
-                    <button type="submit" className="btn btn-gold">Place Order (₹{total.toLocaleString('en-IN')})</button>
+                    <button type="button" className="btn btn-outline btn-lg" onClick={() => setStep(2)}>Back</button>
+                    <button type="submit" className="btn btn-gold btn-lg">Place Order (₹{total.toLocaleString('en-IN')})</button>
                   </div>
                 </div>
               )}

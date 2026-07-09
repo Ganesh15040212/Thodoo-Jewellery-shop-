@@ -77,7 +77,7 @@ export default function QuickViewModal({ product, onClose, fromCategory }) {
             </div>
 
             <div className="quickview-actions">
-              <button className="btn btn-gold flex-1" onClick={handleCart}>
+              <button className="btn btn-gold btn-lg flex-1" onClick={handleCart}>
                 <ShoppingBag size={18} /> Add to Cart
               </button>
               <button className={`btn ${wished ? 'btn-outline' : 'btn-ghost'}`} onClick={handleWish} style={{ width: '46px', height: '46px', padding: '0', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: wished ? 'var(--gold)' : 'var(--charcoal-mid)', borderColor: wished ? 'var(--gold)' : 'rgba(0,0,0,0.1)' }} title="Add to Wishlist">
