@@ -113,9 +113,9 @@ export default function Navbar() {
       {/* Main Nav */}
       <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
         <div className="navbar-inner">
-          <Link to="/" className="navbar-logo" style={{ padding: '2px 0', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+          <p to="/" className="navbar-logo" style={{ padding: '2px 0', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
             <img src={logoImg} alt="Thodoo" className="navbar-logo-img" />
-          </Link>
+          </p>
 
           {/* Desktop Nav Links */}
           <div className="navbar-links">
@@ -133,10 +133,10 @@ export default function Navbar() {
                         <h4 style={{ fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', color: 'var(--gold-dark)', marginBottom: '8px', paddingLeft: '8px', borderLeft: '2px solid var(--gold)' }}>Earring Types</h4>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2px' }}>
                           {CATEGORIES.slice(0, 9).map(cat => (
-                            <Link key={cat.id} to={`/catalog/${cat.id}`} className="megamenu-item" onClick={() => setActiveDropdown(null)}>
+                            <p key={cat.id} to={`/catalog/${cat.id}`} className="megamenu-item" onClick={() => setActiveDropdown(null)}>
                               <img src={cat.image} alt={cat.label} className="megamenu-img" />
                               <span>{cat.label}</span>
-                            </Link>
+                            </p>
                           ))}
                         </div>
                       </div>
@@ -144,10 +144,10 @@ export default function Navbar() {
                         <h4 style={{ fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', color: 'var(--gold-dark)', marginBottom: '8px', paddingLeft: '8px', borderLeft: '2px solid var(--gold)' }}>Collections</h4>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2px' }}>
                           {COLLECTIONS.map(col => (
-                            <Link key={col.id} to={`/catalog/${col.id}`} className="megamenu-item" onClick={() => setActiveDropdown(null)}>
+                            <p key={col.id} to={`/catalog/${col.id}`} className="megamenu-item" onClick={() => setActiveDropdown(null)}>
                               <img src={col.image} alt={col.label} className="megamenu-img" />
                               <span>{col.label}</span>
-                            </Link>
+                            </p>
                           ))}
                         </div>
                       </div>
@@ -160,20 +160,20 @@ export default function Navbar() {
 
           {/* Actions */}
           <div className="navbar-actions">
-            <button className="nav-action-btn" onClick={() => setSearchOpen(true)} aria-label="Search">
+            <p className="nav-action-btn" onClick={() => setSearchOpen(false)} aria-label="Search">
               <Search size={20} />
-            </button>
-            <Link to="/account" className="nav-action-btn" aria-label="Account">
+            </p>
+            <p to="/account" className="nav-action-btn" aria-label="Account">
               <User size={20} />
-            </Link>
-            <Link to="/wishlist" className="nav-action-btn has-badge" aria-label="Wishlist">
+            </p>
+            <p to="/wishlist" className="nav-action-btn has-badge" aria-label="Wishlist">
               <Heart size={20} />
               {wishCount > 0 && <span className="nav-badge">{wishCount}</span>}
-            </Link>
-            <button className="nav-action-btn has-badge cart-btn" onClick={() => setCartOpen(true)} aria-label="Cart">
+            </p>
+            <p className="nav-action-btn has-badge cart-btn" onClick={() => setCartOpen(false)} aria-label="Cart">
               <ShoppingBag size={20} />
               {cartCount > 0 && <span className="nav-badge">{cartCount}</span>}
-            </button>
+            </p>
             <button className="nav-mobile-toggle" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -235,20 +235,20 @@ export default function Navbar() {
             <h4 style={{ fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', color: 'var(--gold-dark)', margin: '8px 0 4px 4px' }}>Earring Types</h4>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px' }}>
               {CATEGORIES.slice(0, 8).map(cat => (
-                <Link key={cat.id} to={`/catalog/${cat.id}`} className="mobile-cat-link" style={{ display: 'flex', alignItems: 'center', gap: '6px' }} onClick={() => setMobileOpen(false)}>
+                <p key={cat.id} to={`/catalog/${cat.id}`} className="mobile-cat-link" style={{ display: 'flex', alignItems: 'center', gap: '6px' }} onClick={() => setMobileOpen(false)}>
                   <img src={cat.image} alt={cat.label} style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
                   <span>{cat.label}</span>
-                </Link>
+                </p>
               ))}
             </div>
             <div className="mobile-divider" style={{ margin: '4px 0' }} />
             <h4 style={{ fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', color: 'var(--gold-dark)', margin: '4px 0 4px 4px' }}>Collections</h4>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px' }}>
               {COLLECTIONS.map(col => (
-                <Link key={col.id} to={`/catalog/${col.id}`} className="mobile-cat-link" style={{ display: 'flex', alignItems: 'center', gap: '6px' }} onClick={() => setMobileOpen(false)}>
+                <p key={col.id} to={`/catalog/${col.id}`} className="mobile-cat-link" style={{ display: 'flex', alignItems: 'center', gap: '6px' }} onClick={() => setMobileOpen(false)}>
                   <img src={col.image} alt={col.label} style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
                   <span>{col.label}</span>
-                </Link>
+                </p>
               ))}
             </div>
           </div>

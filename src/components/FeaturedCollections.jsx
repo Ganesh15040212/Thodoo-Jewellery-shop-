@@ -22,7 +22,7 @@ export default function FeaturedCollections() {
       <div className="featured-marquee-container">
         <div className="featured-marquee-track">
           {marqueeItems.map((col, idx) => (
-            <Link
+            <div
               key={`${col.id}-${idx}`}
               to={`/catalog/${col.id}`}
               className="featured-marquee-card"
@@ -47,7 +47,7 @@ export default function FeaturedCollections() {
                   Explore <span className="arrow-move">→</span>
                 </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

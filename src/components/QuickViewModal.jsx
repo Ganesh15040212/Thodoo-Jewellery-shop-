@@ -1,4 +1,4 @@
-import { X, ShoppingBag, Heart, Shield, Award } from 'lucide-react';
+import { X, ShoppingBag, Heart, Shield, Award, Divide } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
 import { useWishlist } from '../contexts/WishlistContext';
 import { useApp } from '../contexts/AppContext';
@@ -86,9 +86,9 @@ export default function QuickViewModal({ product, onClose, fromCategory }) {
             </div>
 
             <div className="quickview-footer">
-              <Link to={`/product/${product.id}`} state={{ fromCategory }} className="view-full-details">
+              <div to={`/product/${product.id}`} state={{ fromCategory }} className="view-full-details">
                 View Full Product Details →
-              </Link>
+              </div>
             </div>
           </div>
         </div>

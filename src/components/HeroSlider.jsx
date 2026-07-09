@@ -9,8 +9,8 @@ const SLIDES = [
     badge: 'New Bridal Earrings 2025',
     title: 'Where Every Earring\nTells a Story',
     subtitle: 'Exquisite gold, diamond & bridal earrings crafted for India\'s most precious moments.',
-    cta1: { label: 'Shop Bridal', href: '/catalog/bridal' },
-    cta2: { label: 'Explore Diamonds', href: '/catalog/diamond' },
+    cta1: { label: 'Shop Bridal', href: '#' },
+    cta2: { label: 'Explore Diamonds', href: '#' },
     image: '/hero_bridal_earrings.png',
     accent: '#8B5A2B',
     align: 'left',
@@ -20,8 +20,8 @@ const SLIDES = [
     badge: 'Diamond Earrings',
     title: 'Diamonds That\nCapture Eternity',
     subtitle: 'Certified solitaires, cluster dangles & statement studs that define luxury.',
-    cta1: { label: 'Shop Diamonds', href: '/catalog/diamond' },
-    cta2: { label: 'View All', href: '/catalog' },
+    cta1: { label: 'Shop Diamonds', href: '#' },
+    cta2: { label: 'View All', href: '#' },
     image: '/hero_diamond_earrings.png',
     accent: '#7BA3C8',
     align: 'center',
@@ -31,8 +31,8 @@ const SLIDES = [
     badge: 'Temple Earrings',
     title: 'Heritage Crafted\nWith Devotion',
     subtitle: 'Ancient temple art traditions woven into breathtaking gold earrings.',
-    cta1: { label: 'Shop Temple', href: '/catalog/temple' },
-    cta2: { label: 'Antique Earrings', href: '/catalog/antique' },
+    cta1: { label: 'Shop Temple', href: '#' },
+    cta2: { label: 'Antique Earrings', href: '#' },
     image: '/hero_temple_earrings.png',
     accent: '#8B5A2B',
     align: 'left',
@@ -42,8 +42,8 @@ const SLIDES = [
     badge: '18K & 9K Gold',
     title: 'Exquisite 18K & 9K Gold\nFor Every Occasion',
     subtitle: 'Beautiful gold earrings crafted in premium 18K and 9K gold.',
-    cta1: { label: 'Shop Gold Earrings', href: '/catalog?metal=gold' },
-    cta2: { label: 'All Earrings', href: '/catalog' },
+    cta1: { label: 'Shop Gold Earrings', href: '#' },
+    cta2: { label: 'All Earrings', href: '#' },
     image: '/hero_gold_hoops.png',
     accent: '#8B5A2B',
     align: 'center',
@@ -112,14 +112,14 @@ export default function HeroSlider() {
         </h1>
         <p className="hero-subtitle">{slide.subtitle}</p>
         <div className="hero-ctas">
-          <Link to={slide.cta1.href} className="btn btn-gold btn-lg hero-cta">{slide.cta1.label}</Link>
-          <Link to={slide.cta2.href} className="btn btn-outline btn-lg hero-cta">{slide.cta2.label}</Link>
+          <p to={slide.cta1} className="btn btn-gold btn-lg hero-cta">{slide.cta1.label}</p>
+          <p to={slide.cta2} className="btn btn-outline btn-lg hero-cta">{slide.cta2.label}</p>
         </div>
 
         {/* Quick Category Pills */}
         <div className="hero-quick-links">
           {['Studs', 'Jhumkas', 'Hoops', 'Chandeliers'].map(cat => (
-            <Link key={cat} to={`/catalog/${cat.toLowerCase()}`} className="hero-quick-pill">{cat}</Link>
+            <p key={cat} to={`/catalog/${cat.toLowerCase()}`} className="hero-quick-pill">{cat}</p>
           ))}
         </div>
       </div>

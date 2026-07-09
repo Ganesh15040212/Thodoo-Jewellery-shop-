@@ -34,7 +34,7 @@ export default function ProductCard({ product, onQuickView, fromCategory }) {
   };
 
   return (
-    <Link to={`/product/${product.id}`} state={{ fromCategory }} className="product-card">
+    <div to={`/product/${product.id}`} state={{ fromCategory }} className="product-card">
       {/* Image */}
       <div className="product-image-wrap">
         {!imgLoaded && <div className="skeleton product-img-skeleton" />}
@@ -110,6 +110,6 @@ export default function ProductCard({ product, onQuickView, fromCategory }) {
           <span>{product.weight}g</span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

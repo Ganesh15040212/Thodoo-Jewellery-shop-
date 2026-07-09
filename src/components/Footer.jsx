@@ -5,25 +5,25 @@ import logoImg from '../assets/images/logo.png';
 
 const footerLinks = {
   'Shop': [
-    { label: 'Jhumka Collection', href: '/catalog/jhumkas' },
-    { label: 'Stud Earrings', href: '/catalog/studs' },
-    { label: 'Hoop Earrings', href: '/catalog/hoops' },
-    { label: 'Chandelier Earrings', href: '/catalog/chandeliers' },
-    { label: 'Diamond Earrings', href: '/catalog?stone=diamond' },
-    { label: 'Gold Earrings', href: '/catalog?metal=gold' },
+    { label: 'Jhumka Collection', href: '#' },
+    { label: 'Stud Earrings', href: '#' },
+    { label: 'Hoop Earrings', href: '#' },
+    { label: 'Chandelier Earrings', href: '#' },
+    { label: 'Diamond Earrings', href: '#' },
+    { label: 'Gold Earrings', href: '#' },
   ],
   'Customer Care': [
-    { label: 'Track Order', href: '/account' },
-    { label: 'Return Policy', href: '/returns' },
-    { label: 'Exchange Policy', href: '/exchange' },
-    { label: 'Buyback Policy', href: '/buyback' },
-    { label: 'Shipping Info', href: '/shipping' },
-    { label: 'FAQ', href: '/faq' },
+    { label: 'Track Order', href: '#' },
+    { label: 'Return Policy', href: '#' },
+    { label: 'Exchange Policy', href: '#' },
+    { label: 'Buyback Policy', href: '#' },
+    { label: 'Shipping Info', href: '#' },
+    { label: 'FAQ', href: '#' },
   ],
   'Company': [
-    { label: 'About Thodoo Collections', href: '/about' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Blog', href: '/blog' },
+    { label: 'About Thodoo Collections', href: '#' },
+    { label: 'Careers', href: '#' },
+    { label: 'Blog', href: '#' },
   ],
 };
 
@@ -59,18 +59,18 @@ export default function Footer() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <Link to="/" className="footer-logo" style={{ textDecoration: 'none' }}>
+              <p to="/" className="footer-logo" style={{ textDecoration: 'none' }}>
                 <img src={logoImg} alt="Thodoo" className="footer-logo-img" />
-              </Link>
+              </p>
               <p className="footer-about">
                 India's most trusted premium earring brand, crafting exquisite gold, diamond,
                 and bridal earrings since 1975. Over 5 lakh happy customers across India.
               </p>
               <div className="footer-contact-items">
-                <a href="tel:+919385411051" className="footer-contact-item">
+                <a href="#" className="footer-contact-item">
                   <Phone size={14} /> +91 93854 11051
                 </a>
-                <a href="mailto:thodoo.co@gmail.com" className="footer-contact-item">
+                <a href="#" className="footer-contact-item">
                   <Mail size={14} /> thodoo.co@gmail.com
                 </a>
                 <span className="footer-contact-item" style={{ alignItems: 'flex-start' }}>
@@ -136,9 +136,9 @@ export default function Footer() {
                 <ul className="footer-links">
                   {links.map(link => (
                     <li key={link.label}>
-                      <Link to={link.href} className="footer-link">
+                      <p to={link} className="footer-link">
                         <ArrowRight size={12} /> {link.label}
-                      </Link>
+                      </p>
                     </li>
                   ))}
                 </ul>
@@ -170,9 +170,9 @@ export default function Footer() {
               <p>© 2026 Thodoo Collections. All rights reserved.</p>
             </div>
             <div className="footer-bottom-links">
-              <Link to="/privacy" className="footer-bottom-link">Privacy Policy</Link>
-              <Link to="/terms" className="footer-bottom-link">Terms of Service</Link>
-              <Link to="/sitemap" className="footer-bottom-link">Sitemap</Link>
+              <p to="/privacy" className="footer-bottom-link">Privacy Policy</p>
+              <p to="/terms" className="footer-bottom-link">Terms of Service</p>
+              <p to="/sitemap" className="footer-bottom-link">Sitemap</p>
             </div>
             <div className="footer-payment-icons">
               {['UPI', 'Visa', 'MC', 'Paytm', 'GPay'].map(p => (

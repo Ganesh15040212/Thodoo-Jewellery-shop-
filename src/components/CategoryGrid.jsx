@@ -20,7 +20,7 @@ export default function CategoryGrid() {
       <div className="category-marquee-container">
         <div className="category-marquee-track">
           {marqueeItems.map((cat, idx) => (
-            <Link
+            <div
               key={`${cat.id}-${idx}`}
               to={`/catalog/${cat.id}`}
               className="category-marquee-card"
@@ -45,7 +45,7 @@ export default function CategoryGrid() {
                   Explore <span className="arrow-move">→</span>
                 </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
