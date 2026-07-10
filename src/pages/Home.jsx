@@ -7,6 +7,7 @@ import FeaturedCollections from '../components/FeaturedCollections';
 import ProductCard from '../components/ProductCard';
 import QuickViewModal from '../components/QuickViewModal';
 import { PRODUCTS, GOLD_RATE } from '../data/products';
+import { useMarqueeDrag } from '../hooks/useMarqueeDrag';
 import '../styles/pages/Home.css';
 import social1 from '../assets/1.png';
 import social2 from '../assets/2.png';
@@ -17,6 +18,8 @@ import social6 from '../assets/6.png';
 
 export default function Home() {
   const [quickView, setQuickView] = useState(null);
+  const { containerRef: whyMarqueeRef, dragProps: whyDragProps } = useMarqueeDrag();
+  const { containerRef: socialMarqueeRef, dragProps: socialDragProps } = useMarqueeDrag();
 
   // Filter products for different sections
   const newArrivals = PRODUCTS.filter(p => p.badge === 'New' || p.id === 2 || p.id === 4).slice(0, 4);
@@ -218,8 +221,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Full-width Marquee Section */}
-        <div className="why-marquee-container">
+        {/* Full-width Marquee Section — drag to scroll horizontally */}
+        <div ref={whyMarqueeRef} className="why-marquee-container" {...whyDragProps}>
           <div className="why-marquee-track">
             {[
               ...[
@@ -279,8 +282,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Full-width Marquee Section (Left to Right) */}
-        <div className="social-marquee-container">
+        {/* Full-width Marquee Section (Left to Right) — drag to scroll horizontally */}
+        <div ref={socialMarqueeRef} className="social-marquee-container" {...socialDragProps}>
           <div className="social-marquee-track">
             {socialMarqueeItems.map((item, idx) => (
               <a key={idx} href="" target="_blank" rel="noopener noreferrer" className="social-marquee-card">

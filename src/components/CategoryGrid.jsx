@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { CATEGORIES } from '../data/categories';
+import { useMarqueeDrag } from '../hooks/useMarqueeDrag';
 import '../styles/components/CategoryGrid.css';
 
 export default function CategoryGrid() {
   // Duplicate categories multiple times to create a seamless, infinite loop marquee
   const marqueeItems = [...CATEGORIES, ...CATEGORIES, ...CATEGORIES];
+  const { containerRef, dragProps } = useMarqueeDrag();
 
   return (
     <section id="earring-types" className="section category-section" style={{ overflow: 'hidden' }}>
@@ -16,8 +18,8 @@ export default function CategoryGrid() {
         </div>
       </div>
       
-      {/* Full-width Marquee Section */}
-      <div className="category-marquee-container">
+      {/* Full-width Marquee Section — drag to scroll horizontally */}
+      <div ref={containerRef} className="category-marquee-container" {...dragProps}>
         <div className="category-marquee-track">
           {marqueeItems.map((cat, idx) => (
             <div

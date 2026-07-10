@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { COLLECTIONS } from '../data/categories';
+import { useMarqueeDrag } from '../hooks/useMarqueeDrag';
 import '../styles/components/FeaturedCollections.css';
 
 export default function FeaturedCollections() {
   // Duplicate collections multiple times to create a seamless, infinite loop marquee
   const marqueeItems = [...COLLECTIONS, ...COLLECTIONS, ...COLLECTIONS];
+  const { containerRef, dragProps } = useMarqueeDrag();
 
   return (
     <section className="section featured-section" style={{ overflow: 'hidden' }}>
@@ -18,8 +20,8 @@ export default function FeaturedCollections() {
         </div>
       </div>
       
-      {/* Full-width Marquee Section */}
-      <div className="featured-marquee-container">
+      {/* Full-width Marquee Section — drag to scroll horizontally */}
+      <div ref={containerRef} className="featured-marquee-container" {...dragProps}>
         <div className="featured-marquee-track">
           {marqueeItems.map((col, idx) => (
             <div
